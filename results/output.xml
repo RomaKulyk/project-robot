@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-09T10:32:09.297976" rpa="false" schemaversion="5">
+<suite id="s1" name="Project-Robot" source="C:\Users\poman\project-robot">
+<suite id="s1-s1" name="Tests" source="C:\Users\poman\project-robot\Tests">
+<suite id="s1-s1-s1" name="TeseCase007" source="C:\Users\poman\project-robot\Tests\TeseCase007.robot">
+<test id="s1-s1-s1-t1" name="Check invoice manager page" line="5">
+<kw name="Comment" owner="BuiltIn">
+<arg>We've learned how to create a custom keyword!</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="0.000000"/>
+</kw>
+<kw name="Navigate To Home Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-09T10:32:09.597748" level="INFO">Opening browser 'chrome' to base url 'http://inv.beaufortfairmont.com'.</msg>
+<arg>http://inv.beaufortfairmont.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.178425"/>
+</kw>
+<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.178425"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-09T10:32:15.813936" level="INFO">Current page contains text 'Invoice Manager'.</msg>
+<arg>Invoice Manager</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T10:32:15.776173" elapsed="0.038763"/>
+</kw>
+<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.218186"/>
+</test>
+<status status="PASS" start="2025-03-09T10:32:09.334309" elapsed="6.482626"/>
+</suite>
+<status status="PASS" start="2025-03-09T10:32:09.329054" elapsed="6.489881"/>
+</suite>
+<status status="PASS" start="2025-03-09T10:32:09.297976" elapsed="6.522956"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Project-Robot" id="s1" pass="1" fail="0" skip="0">Project-Robot</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Project-Robot.Tests</stat>
+<stat name="TeseCase007" id="s1-s1-s1" pass="1" fail="0" skip="0">Project-Robot.Tests.TeseCase007</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,165 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-08T19:29:20.544280" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\poman\project-robot\Tests">
-<suite id="s1-s1" name="TestCase1" source="C:\Users\poman\project-robot\Tests\TestCase1.robot">
-<test id="s1-s1-t1" name="TEST1" line="7">
-<kw name="Log My Specific Username And Password" owner="resources">
-<msg time="2025-03-08T19:29:20.669248" level="TRACE">Arguments: [ ${USERNAME2}='testuser' | ${PASSWORD}='demo' ]</msg>
-<kw name="Log My Password" owner="resources">
-<msg time="2025-03-08T19:29:20.671248" level="TRACE">Arguments: [ ${PASSWORD}='demo' ]</msg>
+<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-09T11:46:57.619828" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase010" source="C:\Users\poman\project-robot\Tests\TestCase010.robot">
+<test id="s1-t1" name="Using Variables" line="8">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.671248" level="TRACE">Arguments: [ 'demo' ]</msg>
-<msg time="2025-03-08T19:29:20.671248" level="INFO">demo</msg>
-<msg time="2025-03-08T19:29:20.671248" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
+<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</msg>
+<arg>My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.671248" elapsed="0.000000"/>
-</kw>
-<msg time="2025-03-08T19:29:20.671248" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.670248" elapsed="0.001000"/>
-</kw>
-<kw name="Log My Username" owner="resources">
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Arguments: [ ${USERNAME}='testuser' ]</msg>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Arguments: [ 'testuser' ]</msg>
-<msg time="2025-03-08T19:29:20.672247" level="INFO">testuser</msg>
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Return: None</msg>
-<arg>${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.672247" elapsed="0.000000"/>
-</kw>
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Return: None</msg>
-<arg>${USERNAME2}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.672247" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Arguments: [ 'This is the final video of the first chapter' ]</msg>
-<msg time="2025-03-08T19:29:20.672247" level="INFO">This is the final video of the first chapter</msg>
-<msg time="2025-03-08T19:29:20.672247" level="TRACE">Return: None</msg>
-<arg>This is the final video of the first chapter</arg>
+<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</msg>
+<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.672247" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
-<msg time="2025-03-08T19:29:20.673253" level="TRACE">Return: None</msg>
-<arg>${DICTIONARY}[username]</arg>
-<arg>${DICTIONARY}[password]</arg>
-<status status="PASS" start="2025-03-08T19:29:20.667239" elapsed="0.006014"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${name} = Lisa</msg>
+<var>${name}</var>
+<arg>Lisa</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
-<kw name="Log My Specific Username And Password" owner="resources">
-<msg time="2025-03-08T19:29:20.673253" level="TRACE">Arguments: [ ${USERNAME2}='testuser2' | ${PASSWORD}='demo2' ]</msg>
-<kw name="Log My Password" owner="resources">
-<msg time="2025-03-08T19:29:20.674252" level="TRACE">Arguments: [ ${PASSWORD}='demo2' ]</msg>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.674252" level="TRACE">Arguments: [ 'demo2' ]</msg>
-<msg time="2025-03-08T19:29:20.674252" level="INFO">demo2</msg>
-<msg time="2025-03-08T19:29:20.674252" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.674252" elapsed="0.000000"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${color} = Orange</msg>
+<var>${color}</var>
+<arg>Orange</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
-<msg time="2025-03-08T19:29:20.674761" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.673253" elapsed="0.001508"/>
-</kw>
-<kw name="Log My Username" owner="resources">
-<msg time="2025-03-08T19:29:20.674761" level="TRACE">Arguments: [ ${USERNAME}='testuser2' ]</msg>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Arguments: [ 'testuser2' ]</msg>
-<msg time="2025-03-08T19:29:20.675775" level="INFO">testuser2</msg>
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Return: None</msg>
-<arg>${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.674761" elapsed="0.001014"/>
-</kw>
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Return: None</msg>
-<arg>${USERNAME2}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.674761" elapsed="0.001014"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${team} = Bengals</msg>
+<var>${team}</var>
+<arg>Bengals</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Arguments: [ 'This is the final video of the first chapter' ]</msg>
-<msg time="2025-03-08T19:29:20.675775" level="INFO">This is the final video of the first chapter</msg>
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Return: None</msg>
-<arg>This is the final video of the first chapter</arg>
+<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Lisa. My favorite color is Orange. My favorite NFL team is the Bengals.</msg>
+<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.675775" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
-<msg time="2025-03-08T19:29:20.675775" level="TRACE">Return: None</msg>
-<arg>${DICTIONARY2}[username]</arg>
-<arg>${DICTIONARY2}[password]</arg>
-<status status="PASS" start="2025-03-08T19:29:20.673253" elapsed="0.002522"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${name} = Fred</msg>
+<var>${name}</var>
+<arg>Fred</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </kw>
-<tag>demo1 demo2</tag>
-<status status="PASS" start="2025-03-08T19:29:20.667239" elapsed="0.008536"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${color} = Green</msg>
+<var>${color}</var>
+<arg>Green</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">${team} = Dolphins</msg>
+<var>${team}</var>
+<arg>Dolphins</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Fred. My favorite color is Green. My favorite NFL team is the Dolphins.</msg>
+<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
 </test>
-<doc>This is my first test case</doc>
-<status status="PASS" start="2025-03-08T19:29:20.642454" elapsed="0.035997"/>
-</suite>
-<suite id="s1-s2" name="TestCase2" source="C:\Users\poman\project-robot\Tests\TestCase2.robot">
-<test id="s1-s2-t1" name="TEST1" line="8">
-<kw name="Log My Specific Username And Password" owner="resources">
-<msg time="2025-03-08T19:29:20.685857" level="TRACE">Arguments: [ ${USERNAME2}='testuser2' | ${PASSWORD}='demo2' ]</msg>
-<kw name="Log My Password" owner="resources">
-<msg time="2025-03-08T19:29:20.686867" level="TRACE">Arguments: [ ${PASSWORD}='demo2' ]</msg>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.687871" level="TRACE">Arguments: [ 'demo2' ]</msg>
-<msg time="2025-03-08T19:29:20.687871" level="INFO">demo2</msg>
-<msg time="2025-03-08T19:29:20.687871" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.686867" elapsed="0.001004"/>
-</kw>
-<msg time="2025-03-08T19:29:20.687871" level="TRACE">Return: None</msg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.686867" elapsed="0.001004"/>
-</kw>
-<kw name="Log My Username" owner="resources">
-<msg time="2025-03-08T19:29:20.687871" level="TRACE">Arguments: [ ${USERNAME}='testuser2' ]</msg>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Arguments: [ 'testuser2' ]</msg>
-<msg time="2025-03-08T19:29:20.688866" level="INFO">testuser2</msg>
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Return: None</msg>
-<arg>${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.688866" elapsed="0.000000"/>
-</kw>
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Return: None</msg>
-<arg>${USERNAME2}</arg>
-<status status="PASS" start="2025-03-08T19:29:20.687871" elapsed="0.000995"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Arguments: [ 'This is the final video of the first chapter' ]</msg>
-<msg time="2025-03-08T19:29:20.688866" level="INFO">This is the final video of the first chapter</msg>
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Return: None</msg>
-<arg>This is the final video of the first chapter</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-08T19:29:20.688866" elapsed="0.000000"/>
-</kw>
-<msg time="2025-03-08T19:29:20.688866" level="TRACE">Return: None</msg>
-<arg>${DICTIONARY2}[username]</arg>
-<arg>${DICTIONARY2}[password]</arg>
-<status status="PASS" start="2025-03-08T19:29:20.685857" elapsed="0.003009"/>
-</kw>
-<tag>demo1 demo2</tag>
-<status status="PASS" start="2025-03-08T19:29:20.684344" elapsed="0.005524"/>
-</test>
-<doc>This is my second test case</doc>
-<status status="PASS" start="2025-03-08T19:29:20.681346" elapsed="0.012779"/>
-</suite>
-<meta name="Randomized">Suites and tests (seed 6750473988612184298)</meta>
-<status status="PASS" start="2025-03-08T19:29:20.546289" elapsed="0.149350"/>
+<status status="PASS" start="2025-03-09T11:46:57.619828" elapsed="0.022893"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">demo1 demo2</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
-<stat name="TestCase1" id="s1-s1" pass="1" fail="0" skip="0">Tests.TestCase1</stat>
-<stat name="TestCase2" id="s1-s2" pass="1" fail="0" skip="0">Tests.TestCase2</stat>
+<stat name="TestCase010" id="s1" pass="1" fail="0" skip="0">TestCase010</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,10 +1,11 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource    ../Resources/PO/LandingPage.robot
 
 *** Keywords ***
 Search for Products
-    Go To  https://rozetka.com.ua/ua/
-    Wait Until Page Contains  Rozetka
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
     Input Text    xpath=//rz-search-suggest/form/div[1]/div/div/input    Ferrari 458
     Click Button  xpath=//rz-search-suggest/form/div[1]/button
     Wait Until Page Contains    Результати пошуку

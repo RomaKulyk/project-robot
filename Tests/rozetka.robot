@@ -18,6 +18,19 @@ User can search for products
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
     Rozetka.Search for Products
+
+Uscer can view a product
+    [Documentation]  This is some basic info about the test
+    [Tags]  Smoke
+    Rozetka.Search for Products
+    Rozetka.Select Product from Search Results
+
+User can add a product to the cart
+    [Documentation]  This is some basic info about the test
+    [Tags]  Smoke
+    Rozetka.Search for Products
+    Rozetka.Select Product from Search Results
+    Rozetka.Add Product to Cart
     
 User must sign in to check out
     [Documentation]  This is some basic info about the test

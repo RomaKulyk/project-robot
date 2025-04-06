@@ -1,48 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-09T10:32:09.297976" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-04-06T11:18:01.949037" rpa="false" schemaversion="5">
 <suite id="s1" name="Project-Robot" source="C:\Users\poman\project-robot">
 <suite id="s1-s1" name="Tests" source="C:\Users\poman\project-robot\Tests">
-<suite id="s1-s1-s1" name="TeseCase007" source="C:\Users\poman\project-robot\Tests\TeseCase007.robot">
-<test id="s1-s1-s1-t1" name="Check invoice manager page" line="5">
-<kw name="Comment" owner="BuiltIn">
-<arg>We've learned how to create a custom keyword!</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="0.000000"/>
+<suite id="s1-s1-s1" name="Rozetka" source="C:\Users\poman\project-robot\Tests\rozetka.robot">
+<kw name="Insert Testing Data" owner="Common" type="SETUP">
+<kw name="Custom Keyword 1" owner="Common">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-06T11:18:02.191031" level="INFO">Doing keyword 1...</msg>
+<arg>Doing keyword 1...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-06T11:18:02.191031" elapsed="0.000000"/>
 </kw>
-<kw name="Navigate To Home Page">
+<status status="PASS" start="2025-04-06T11:18:02.190034" elapsed="0.000997"/>
+</kw>
+<kw name="Custom Keyword 2" owner="Common">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-06T11:18:02.192031" level="INFO">Doing keyword 2...</msg>
+<arg>Doing keyword 2...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-06T11:18:02.192031" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:02.191031" elapsed="0.002000"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:02.189032" elapsed="0.003999"/>
+</kw>
+<test id="s1-s1-s1-t1" name="User can add a product to the cart" line="28">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-09T10:32:09.597748" level="INFO">Opening browser 'chrome' to base url 'http://inv.beaufortfairmont.com'.</msg>
-<arg>http://inv.beaufortfairmont.com</arg>
+<msg time="2025-04-06T11:18:02.195031" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.178425"/>
+<status status="PASS" start="2025-04-06T11:18:02.195031" elapsed="2.060706"/>
 </kw>
-<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.178425"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-06T11:18:04.255737" elapsed="0.053997"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-09T10:32:15.813936" level="INFO">Current page contains text 'Invoice Manager'.</msg>
-<arg>Invoice Manager</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T10:32:15.776173" elapsed="0.038763"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-04-06T11:18:04.309734" elapsed="0.001005"/>
 </kw>
-<status status="PASS" start="2025-03-09T10:32:09.597748" elapsed="6.218186"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-04-06T11:18:04.311732" elapsed="0.208009"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:02.194030" elapsed="2.325711"/>
+</kw>
+<kw name="Search for Products" owner="Rozetka">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-06T11:18:04.522267" level="INFO">Opening url 'https://rozetka.com.ua/ua/'</msg>
+<arg>https://rozetka.com.ua/ua/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-06T11:18:04.522267" elapsed="1.550174"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:04.522267" elapsed="1.550685"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Rozetka</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-06T11:18:06.072952" elapsed="0.302552"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:06.072952" elapsed="0.302552"/>
+</kw>
+<kw name="Search for Products" owner="TopNav">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-06T11:18:06.377511" level="INFO">Typing text 'Ferrari 458' into text field 'xpath=//rz-search-suggest/form/div[1]/div/div/input'.</msg>
+<arg>xpath=//rz-search-suggest/form/div[1]/div/div/input</arg>
+<arg>Ferrari 458</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T11:18:06.376509" elapsed="1.366449"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-06T11:18:07.742958" level="INFO">Clicking button 'xpath=//rz-search-suggest/form/div[1]/button'.</msg>
+<arg>xpath=//rz-search-suggest/form/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T11:18:07.742958" elapsed="5.229113"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:06.375504" elapsed="6.597076"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResult">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Результати пошуку</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-06T11:18:12.976595" elapsed="1.471515"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:12.975595" elapsed="1.472515"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:04.521271" elapsed="9.927850"/>
+</kw>
+<kw name="Select Product from Search Results" owner="Rozetka">
+<kw name="Click Product link" owner="SearchResult">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-06T11:18:14.458123" level="INFO">Clicking link 'xpath=//li[5]/rz-catalog-tile/app-goods-tile-default/div/div[2]/div[1]/rz-button-product-page[1]/rz-indexed-link/a'.</msg>
+<arg>xpath=//li[5]/rz-catalog-tile/app-goods-tile-default/div/div[2]/div[1]/rz-button-product-page[1]/rz-indexed-link/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T11:18:14.454120" elapsed="0.814598"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:14.453120" elapsed="0.815598"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Product">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Машинка Rastar Ferrari 458 Speciale A 1:14 червоний (4540038)</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-06T11:18:15.269726" elapsed="0.233894"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:15.268718" elapsed="0.234902"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:14.450122" elapsed="1.053498"/>
+</kw>
+<kw name="Add Product to Cart" owner="Rozetka">
+<kw name="Add to Cart" owner="Product">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-06T11:18:15.507637" level="INFO">Clicking button 'xpath=//rz-product-buy-btn/rz-buy-button/button'.</msg>
+<arg>xpath=//rz-product-buy-btn/rz-buy-button/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T11:18:15.506636" elapsed="1.728379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-06T11:18:20.235960" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-06T11:18:17.235015" elapsed="3.001456"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:15.505643" elapsed="4.730828"/>
+</kw>
+<kw name="Verify Product Added" owner="Cart">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Оформити замовлення</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-06T11:18:20.237485" elapsed="0.232363"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Продовжити покупки</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-06T11:18:20.469848" elapsed="0.223944"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:20.236471" elapsed="0.457321"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:15.505643" elapsed="5.188149"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-06T11:18:20.695817" elapsed="2.682574"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:20.694866" elapsed="2.683525"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-04-06T11:18:02.193031" elapsed="21.185360"/>
 </test>
-<status status="PASS" start="2025-03-09T10:32:09.334309" elapsed="6.482626"/>
+<kw name="Cleanup Testing Data" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-06T11:18:23.382384" level="INFO">I am cleaning up the test data...</msg>
+<arg>I am cleaning up the test data...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-06T11:18:23.381391" elapsed="0.002013"/>
+</kw>
+<status status="PASS" start="2025-04-06T11:18:23.380386" elapsed="0.003018"/>
+</kw>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" start="2025-04-06T11:18:01.988032" elapsed="21.395372"/>
 </suite>
-<status status="PASS" start="2025-03-09T10:32:09.329054" elapsed="6.489881"/>
+<status status="PASS" start="2025-04-06T11:18:01.983032" elapsed="21.403354"/>
 </suite>
-<status status="PASS" start="2025-03-09T10:32:09.297976" elapsed="6.522956"/>
+<status status="PASS" start="2025-04-06T11:18:01.959042" elapsed="21.428353"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
 <stat name="Project-Robot" id="s1" pass="1" fail="0" skip="0">Project-Robot</stat>
 <stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Project-Robot.Tests</stat>
-<stat name="TeseCase007" id="s1-s1-s1" pass="1" fail="0" skip="0">Project-Robot.Tests.TeseCase007</stat>
+<stat name="Rozetka" id="s1-s1-s1" pass="1" fail="0" skip="0">Project-Robot.Tests.Rozetka</stat>
 </suite>
 </statistics>
 <errors>

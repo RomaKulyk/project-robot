@@ -4,12 +4,12 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Begin Web Test
-    Open Browser    about:blank  chrome
+    Open Browser    about:blank  ${BROWSER}
     Maximize Browser Window
 
 # Initialize Selenium
-    Set Selenium Speed    .2s
-    Set Selenium Timeout    10s
+    # Set Selenium Speed    .2s
+    # Set Selenium Timeout    10s
 
 End Web Test
     Close Browser

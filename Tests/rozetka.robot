@@ -11,15 +11,17 @@ Test Teardown  End Web Test
 # robot -d results .\Tests\rozetka.robot
 
 *** Variables ***
-
+${BROWSER}    chrome
+${START_URL}    https://rozetka.com.ua
+${SEARCH_TERM}    Ferrari 458
 
 *** Test Cases ***
 User can search for products
     [Documentation]  This is some basic info about the test
-    [Tags]  Smoke
+    [Tags]  Current
     Rozetka.Search for Products
 
-Uscer can view a product
+User can view a product
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
     Rozetka.Search for Products

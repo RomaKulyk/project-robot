@@ -8,8 +8,8 @@ Begin Web Test
     Maximize Browser Window
 
 # Initialize Selenium
-    # Set Selenium Speed    .2s
-    # Set Selenium Timeout    10s
+    Set Selenium Speed    .2s
+    Set Selenium Timeout    10s
 
 End Web Test
     Close Browser

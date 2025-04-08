@@ -170,3 +170,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Results folder for the current test execution
+/Output

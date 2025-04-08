@@ -16,25 +16,25 @@ ${START_URL}    https://rozetka.com.ua
 ${SEARCH_TERM}    Ferrari 458
 
 *** Test Cases ***
-User can search for products
+Logged out user should be able to search for products
     [Documentation]  This is some basic info about the test
     [Tags]  Current
     Rozetka.Search for Products
 
-User can view a product
+Logged out user should be able to view a product
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
     Rozetka.Search for Products
     Rozetka.Select Product from Search Results
 
-User can add a product to the cart
+Logged out user should be able to add a product to the cart
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
     Rozetka.Search for Products
     Rozetka.Select Product from Search Results
     Rozetka.Add Product to Cart
     
-User must sign in to check out
+Logged out user should be asked to sign in to check out
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
     Rozetka.Search for Products

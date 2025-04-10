@@ -1,55 +1,31 @@
 *** Settings ***
 Documentation    This is some basic infor about the whole sutite.
 Library          SeleniumLibrary
-
+Resource    ../Resources/CrmCommon.robot
+Resource    ../Resources/CrmApp.robot
+Test Setup    Begin Web Test
+Test Teardown    End Web Test
 # Run the script
 # robot -d results .\Tests\crm.robot   
 
 *** Variables ***
-
+${BROWSER} =  chrome
+${URL} =  https://automationplayground.com/crm 
+${VALID_LOGIN_EMAIL} =  admin@robotframeworktutorial.com
+${VALID_LOGIN_PASSWORD} =  Password!
 
 *** Test Cases ***
 Should be able to add a new castomer
     [Documentation]    This is some basic info about the test
     [Tags]             1006    Smoke    Contacts
-    # Initialize Selenium
-    Set Selenium Speed    .2s
-    Set Selenium Timeout    10s
+    CrmApp.Go to "Home" Page
+    CrmApp.Login With Valid Credentials    ${VALID_LOGIN_EMAIL}    ${VALID_LOGIN_PASSWORD}
+    CrmApp.Add New Customer
     
-    # Open the browser and navigate to the page
-    Log                Starting the test case!
-    Open Browser       https://automationplayground.com/crm    chrome
+    #LOG OUT
+    Click Link    Sign Out
+    Wait Until Page Contains    Signed Out
 
-    # Resize browser window for recording
-    # Set Window Position    x=341    y=169
-    Set Window Size    1920    1080
-
-    Page Should Contain    Customers Are Priority One!
-
-    Click Link    xpath=//*[@id="SignIn"]
-    Page Should Contain    Login
-
-    Input Text    locator=//*[@id="email-id"]   text=admin@robotframeworktutorial.com
-    Input Text    locator=//*[@id="password"]    text=qwe
-    Click Button    xpath=//*[@id="submit-id"]
-    Page Should Contain    Our Happy Customers
-    Click Link    xpath=//*[@id="new-customer"]
-    Page Should Contain    Add Customer
-    
-    Input Text    locator=//*[@id="EmailAddress"]   text=janedoe@gmail.com
-    Input Text    locator=//*[@id="FirstName"]  text=Jane
-    Input Text    locator=//*[@id="LastName"]  text=Doe
-    Input Text    locator=//*[@id="City"]   text=Dallas
-
-    Select From List By Value    //*[@id="StateOrRegion"]    TX
-    Select Radio Button    gender    female
-    Select Checkbox    name=promos-name
-    Click Button    Submit
-    Wait Until Page Contains    Success! New customer added.
-    
-    Sleep              3s
-    Close Browser    
+      
 
 *** Keywords ***
-
-

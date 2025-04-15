@@ -1,85 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-09T11:46:57.619828" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase010" source="C:\Users\poman\project-robot\Tests\TestCase010.robot">
-<test id="s1-t1" name="Using Variables" line="8">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</msg>
-<arg>My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<robot generator="Robot 7.2.2 (Python 3.12.1 on win32)" generated="2025-03-14T16:32:53.900164" rpa="false" schemaversion="5">
+<suite id="s1" name="TC WindowsApp" source="C:\Users\poman\project-robot\Tests\TC_WindowsApp.robot">
+<test id="s1-t1" name="TEST" line="7">
+<kw name="Open Application" owner="RPA.Desktop">
+<msg time="2025-03-14T16:32:59.491272" level="INFO">Starting application: running_app.bat</msg>
+<arg>${RUNNING_APP}</arg>
+<doc>Start a given application by name (if in PATH),
+or by path to executable.</doc>
+<status status="PASS" start="2025-03-14T16:32:59.491272" elapsed="0.024230"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Paul. My favorite color is teal. My favorite NFL team is the Jaguars.</msg>
-<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Control Window" owner="RPA.Windows">
+<msg time="2025-03-14T16:32:59.527245" level="INFO">Getting element with locator: Get Element name:"Running App" and type:WindowControl</msg>
+<msg time="2025-03-14T16:32:59.527245" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000002BCC1F16030&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Робочий стіл 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-03-14T16:32:59.527245" level="INFO">Locator 'Get Element name:"Running App" and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Get Element', 0), ('Name', 'Running App', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-03-14T16:33:03.571863" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BCC240A300&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Running App', automation_id='Login Form', control_type='WindowControl', class_name='LoginForm', left=797, right=1122, top=272, bottom=747, width=325, height=475, xcenter=959, ycenter=509)</msg>
+<arg>${LOGIN_FORM}</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<status status="PASS" start="2025-03-14T16:32:59.515502" elapsed="4.560967"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${name} = Lisa</msg>
-<var>${name}</var>
-<arg>Lisa</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:33:06.076918" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:33:04.076469" elapsed="2.000449"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${color} = Orange</msg>
-<var>${color}</var>
-<arg>Orange</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Send Keys" owner="RPA.Windows">
+<msg time="2025-03-14T16:33:06.076918" level="INFO">Getting element with locator: Get Element name:"Username Input"</msg>
+<msg time="2025-03-14T16:33:06.076918" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BCC240A300&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Running App', automation_id='Login Form', control_type='WindowControl', class_name='LoginForm', left=797, right=1122, top=272, bottom=747, width=325, height=475, xcenter=959, ycenter=509)</msg>
+<msg time="2025-03-14T16:33:06.076918" level="INFO">Locator 'Get Element name:"Username Input"' produced matcher: MatchObject(locators=[('Name', 'Get Element', 0), ('Name', 'Username Input', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-03-14T16:33:06.096935" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.EditControl object at 0x000002BCC40BE840&gt;, locator='Get Element name:"Username Input"', name='Username Input', automation_id='Login Form.Username Input', control_type='EditControl', class_name='QLineEdit', left=904, right=1109, top=332, bottom=352, width=205, height=20, xcenter=1006, ycenter=342)</msg>
+<msg time="2025-03-14T16:33:06.096935" level="INFO">Sending keys 'R2D2' to element: ControlType: EditControl    ClassName: QLineEdit    AutomationId: Login Form.Username Input    Rect: (904,332,1109,352)[205x20]    Name: 'Username Input'    Handle: 0x0(0)</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>R2D2</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<status status="PASS" start="2025-03-14T16:33:06.076918" elapsed="0.572722"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${team} = Bengals</msg>
-<var>${team}</var>
-<arg>Bengals</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Send Keys" owner="RPA.Windows">
+<msg time="2025-03-14T16:33:06.649640" level="INFO">Getting element with locator: Get Element name:"Password Input"</msg>
+<msg time="2025-03-14T16:33:06.649640" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BCC240A300&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Running App', automation_id='Login Form', control_type='WindowControl', class_name='LoginForm', left=797, right=1122, top=272, bottom=747, width=325, height=475, xcenter=959, ycenter=509)</msg>
+<msg time="2025-03-14T16:33:06.649640" level="INFO">Locator 'Get Element name:"Password Input"' produced matcher: MatchObject(locators=[('Name', 'Get Element', 0), ('Name', 'Password Input', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-03-14T16:33:06.665090" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.EditControl object at 0x000002BCC40BF0E0&gt;, locator='Get Element name:"Password Input"', name='Password Input', automation_id='Login Form.Password Input', control_type='EditControl', class_name='QLineEdit', left=904, right=1109, top=406, bottom=426, width=205, height=20, xcenter=1006, ycenter=416)</msg>
+<msg time="2025-03-14T16:33:06.665090" level="INFO">Sending keys '1234' to element: ControlType: EditControl    ClassName: QLineEdit    AutomationId: Login Form.Password Input    Rect: (904,406,1109,426)[205x20]    Name: 'Password Input'    Handle: 0x0(0)</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>1234</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<status status="PASS" start="2025-03-14T16:33:06.649640" elapsed="0.567890"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Lisa. My favorite color is Orange. My favorite NFL team is the Bengals.</msg>
-<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:33:09.218294" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:33:07.217530" elapsed="2.000764"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${name} = Fred</msg>
-<var>${name}</var>
-<arg>Fred</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-03-14T16:33:09.218912" level="INFO">Getting element with locator: Get Element name:"Login"</msg>
+<msg time="2025-03-14T16:33:09.218912" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BCC240A300&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Running App', automation_id='Login Form', control_type='WindowControl', class_name='LoginForm', left=797, right=1122, top=272, bottom=747, width=325, height=475, xcenter=959, ycenter=509)</msg>
+<msg time="2025-03-14T16:33:09.218912" level="INFO">Locator 'Get Element name:"Login"' produced matcher: MatchObject(locators=[('Name', 'Get Element', 0), ('Name', 'Login', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-03-14T16:33:09.241286" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ButtonControl object at 0x000002BCC40BFE60&gt;, locator='Get Element name:"Login"', name='Login', automation_id='', control_type='ButtonControl', class_name='QPushButton', left=810, right=1109, top=503, bottom=531, width=299, height=28, xcenter=959, ycenter=517)</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-03-14T16:33:09.218912" elapsed="0.592464"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${color} = Green</msg>
-<var>${color}</var>
-<arg>Green</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Control Window" owner="RPA.Windows">
+<msg time="2025-03-14T16:33:09.811376" level="INFO">Getting element with locator: Get Element name:"Running App" and type:WindowControl</msg>
+<msg time="2025-03-14T16:33:09.811376" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000002BCC40D03B0&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Робочий стіл 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-03-14T16:33:09.811376" level="INFO">Locator 'Get Element name:"Running App" and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Get Element', 0), ('Name', 'Running App', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-03-14T16:33:09.825022" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000002BCC40BD7C0&gt;, locator='Get Element name:"Running App" and type:WindowControl', name='Running App', automation_id='Data Form', control_type='WindowControl', class_name='RunDataForm', left=780, right=1140, top=272, bottom=747, width=360, height=475, xcenter=960, ycenter=509)</msg>
+<arg>${DATA_FORM}</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<status status="PASS" start="2025-03-14T16:33:09.811376" elapsed="0.515032"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">${team} = Dolphins</msg>
-<var>${team}</var>
-<arg>Dolphins</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-03-14T16:33:10.326408" level="FAIL">Get Element name: "Distance" != Distance</msg>
+<arg>${DISTANCE}</arg>
+<arg>Distance</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-03-14T16:33:10.326408" elapsed="0.000000">Get Element name: "Distance" != Distance</status>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-09T11:46:57.642721" level="INFO">My name is Fred. My favorite color is Green. My favorite NFL team is the Dolphins.</msg>
-<arg>My name is ${name}. My favorite color is ${color}. My favorite NFL team is the ${team}.</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<kw name="Close Application" owner="RPA.Desktop">
+<arg>${RUNNING_APP}</arg>
+<doc>Close given application. Needs to be started
+with this library.</doc>
+<status status="NOT RUN" start="2025-03-14T16:33:10.326408" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-03-09T11:46:57.642721" elapsed="0.000000"/>
+<status status="FAIL" start="2025-03-14T16:32:59.491272" elapsed="10.835136">Get Element name: "Distance" != Distance</status>
 </test>
-<status status="PASS" start="2025-03-09T11:46:57.619828" elapsed="0.022893"/>
+<status status="FAIL" start="2025-03-14T16:32:53.900164" elapsed="16.426244"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TestCase010" id="s1" pass="1" fail="0" skip="0">TestCase010</stat>
+<stat name="TC WindowsApp" id="s1" pass="0" fail="1" skip="0">TC WindowsApp</stat>
 </suite>
 </statistics>
 <errors>

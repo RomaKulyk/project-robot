@@ -27,5 +27,7 @@ Add New Customer
     AddCustomer.Vefify Page Loaded
     AddCustomer.Add New Customer
     Customers.Verify Customer Added Successfully
-    
-    Customers.Verify Customer Added Successfully
+
+Sign Out
+    TopNav.Click "Sign Out" lInk
+    LoggedOut.Verify Page Loaded

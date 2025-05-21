@@ -21,6 +21,11 @@ Logged out user should be able to search for products
     [Tags]  Current
     RozetkaApp.Search for Products
 
+Search results page should contains 60 products
+    [Tags]  Current
+    RozetkaApp.Search for Products
+    RozetkaApp.Verify Results Page Contains Products
+
 Logged out user should be able to view a product
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke

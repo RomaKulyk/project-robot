@@ -14,10 +14,13 @@ Search for Products
     TopNav.Search for Products
     SearchResult.Verify Search Completed
 
+Verify Results Page Contains Products
+    SearchResult.Verify Product Count
+
 Select Product from Search Results
     SearchResult.Click Product link
     Product.Verify Page Loaded
-
+    
 Add Product to Cart
     Product.Add to Cart
     Cart.Verify Product Added
@@ -25,5 +28,3 @@ Add Product to Cart
 Begin Checkout
     Cart.Proceed to Checkout
     SignIn.Verify Page Loaded
-    
-

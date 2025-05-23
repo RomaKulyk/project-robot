@@ -13,10 +13,9 @@ Test Teardown  End Web Test
 *** Variables ***
 ${BROWSER}    chrome
 ${START_URL}    https://rozetka.com.ua
-${SEARCH_TERM}    Ferrari 458
 
 *** Test Cases ***
-Left sidebar should contains 17 items
+Left sidebar should contains 18 items
     [Tags]  Current
-    LandingPage.Load
-    LandingPage.Verify Page Loaded
+    RozetkaApp.Go To Main Page
+    LeftSideBar.Click Product Category Links

@@ -173,3 +173,7 @@ cython_debug/
 
 # Results folder for the current test execution
 /Output
+
+# Word files
+.doc
+.docx

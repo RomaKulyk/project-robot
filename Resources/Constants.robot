@@ -7,6 +7,7 @@ Library  SeleniumLibrary
 # TEST CASES
 ${BROWSER}    chrome
 ${START_URL}    https://rozetka.com.ua
+${SEARCH_TERM}    Ferrari 458
 
 
 # RESOURCES

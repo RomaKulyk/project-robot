@@ -10,11 +10,6 @@ Test Teardown  End Web Test
 # use the below line (without the # sign) to run the script
 # robot -d results .\Tests\rozetka_page_should_contains.robot
 
-*** Variables ***
-${BROWSER}    chrome
-${START_URL}    https://rozetka.com.ua
-${SEARCH_TERM}    Ferrari 458
-
 *** Test Cases ***
 Search results page should contains 60 products
     [Tags]  Current

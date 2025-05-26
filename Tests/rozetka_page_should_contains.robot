@@ -8,7 +8,7 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # use the below line (without the # sign) to run the script
-# robot -d results .\Tests\rozetka.robot
+# robot -d results .\Tests\rozetka_page_should_contains.robot
 
 *** Variables ***
 ${BROWSER}    chrome

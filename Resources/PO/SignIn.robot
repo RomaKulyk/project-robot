@@ -1,10 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-
-
-*** Variables ***
-${SIGNIN_MAIN_HEADING} =  xpath=//rz-checkout-orders/rz-checkout-orders-content/div/h1
-
+Resource  ../Constants.robot
 
 *** Keywords ***
 Verify Page Loaded

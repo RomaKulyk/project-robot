@@ -34,7 +34,9 @@ Search for Products
 Select Product from Search Results
     SearchResult.Click Product link
     Product.Verify Page Loaded
-    
+
+Verify Main Page Contains Categories
+    LeftSideBar.Verify Categories Count
+
 Verify Results Page Contains Products
     SearchResult.Verify Product Count
-

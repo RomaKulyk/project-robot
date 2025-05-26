@@ -8,14 +8,11 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # use the below line (without the # sign) to run the script
-# robot -d results .\Tests\rozetka_left_side_bar.robot
-
-*** Variables ***
-${BROWSER}    chrome
-${START_URL}    https://rozetka.com.ua
+# robot -d results .\Tests\tc1_left_side_bar.robot
 
 *** Test Cases ***
-Left sidebar should contains 18 items
+Left sidebar should contains 18 categories
     [Tags]  Current
     RozetkaApp.Go To Main Page
     LeftSideBar.Click Product Category Links
+    RozetkaApp.Verify Main Page Contains Categories

@@ -1,10 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-
-*** Variables ***
-${TOPNAV_SEARCH_BAR} =  xpath=//rz-search-suggest/form/div[1]/div/div/input
-${TOPNAV_SEARCH_BUTTON} =  xpath=//rz-search-suggest/form/div[1]/button
-${TOPNAV_MAIN_LOGO} =  xpath=//header/div/div/a/picture/img
+Resource  ../Constants.robot
 
 *** Keywords ***
 Search for Products

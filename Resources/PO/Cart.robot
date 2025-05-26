@@ -1,8 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-
-*** Variables ***
-${CART_PROCEED_TO_CHECKOUT} =  xpath=//rz-shopping-cart/div/div[1]/div/rz-checkout-button/a
+Resource  ../Constants.robot
 
 *** Keywords ***
 Verify Product Added

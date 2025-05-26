@@ -1,9 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-
-*** Variables ***
-${SEARCH_RESULTS_PRODUCT_LINK} =  xpath=//li[7]/rz-catalog-tile/app-goods-tile-default/div/div[2]/div[1]/rz-button-product-page[1]/rz-indexed-link/a
-${EXPECTED_PRODUCT_COUNT} =  xpath=//li[contains(@class, "catalog-grid__cell catalog-grid__cell_type_slim")]
+Resource  ../Constants.robot
 
 *** Keywords ***
 Verify Search Completed

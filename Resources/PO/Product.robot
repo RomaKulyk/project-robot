@@ -1,8 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-
-*** Variables ***
-${PRODUCT_TO_BUY} =   xpath=//rz-product-buy-btn/rz-buy-button/button
+Resource  ../Constants.robot
 
 *** Keywords ***
 Verify Page Loaded

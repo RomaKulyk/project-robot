@@ -1,12 +1,13 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource     ../PO/TopNav.robot
-Resource     ../Constants.robot
 
 *** Keywords ***
 Click Product Category Links
+    Log  ${PRODUCT_CATEGORY_LIST}
     FOR    ${element}    IN    @{PRODUCT_CATEGORY_LIST}
         Click Link  locator=${element}
+        Log  ${element}
         Sleep  0.5
         TopNav.Click Main Page Logo
         Sleep  0.5

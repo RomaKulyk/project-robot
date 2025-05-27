@@ -8,10 +8,10 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # use the below line (without the # sign) to run the script
-# robot -d results .\Tests\tc1_left_side_bar.robot
+# robot -d results .\Tests\tc1_left_side_bar_ways_to_return.robot
 
 *** Test Cases ***
-User Should Be Able To Return To Main Page In Different Ways
+User should be able to return to main page in three different ways
     [Tags]  Current
     RozetkaApp.Go To Main Page
     LeftSideBar.Click Product Category Link  ${PRODUCT_CATEGORY_LINK_1}

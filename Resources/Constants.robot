@@ -11,8 +11,54 @@ ${SEARCH_TERM}    Ferrari 458
 
 
 # RESOURCES
+
 # Cart.robot
 ${CART_PROCEED_TO_CHECKOUT} =  xpath=//rz-shopping-cart/div/div[1]/div/rz-checkout-button/a
+
+#Footer
+${FOOTER_CROSS_SITE_LINK_1} =  xpath=(//a[contains(@class,'tags-link')])[1]
+${FOOTER_CROSS_SITE_LINK_2} =  xpath=(//a[contains(@class,'tags-link')])[2]
+${FOOTER_CROSS_SITE_LINK_3} =  xpath=(//a[contains(@class,'tags-link')])[3]
+${FOOTER_CROSS_SITE_LINK_4} =  xpath=(//a[contains(@class,'tags-link')])[4]
+${FOOTER_CROSS_SITE_LINK_5} =  xpath=(//a[contains(@class,'tags-link')])[5]
+${FOOTER_CROSS_SITE_LINK_6} =  xpath=(//a[contains(@class,'tags-link')])[6]
+${FOOTER_CROSS_SITE_LINK_7} =  xpath=(//a[contains(@class,'tags-link')])[7]
+${FOOTER_CROSS_SITE_LINK_8} =  xpath=(//a[contains(@class,'tags-link')])[8]
+${FOOTER_CROSS_SITE_LINK_9} =  xpath=(//a[contains(@class,'tags-link')])[9]
+${FOOTER_CROSS_SITE_LINK_10} =  xpath=(//a[contains(@class,'tags-link')])[10]
+${FOOTER_CROSS_SITE_LINK_11} =  xpath=(//a[contains(@class,'tags-link')])[11]
+${FOOTER_CROSS_SITE_LINK_12} =  xpath=(//a[contains(@class,'tags-link')])[12]
+${FOOTER_CROSS_SITE_LINK_13} =  xpath=(//a[contains(@class,'tags-link')])[13]
+${FOOTER_CROSS_SITE_LINK_14} =  xpath=(//a[contains(@class,'tags-link')])[14]
+${FOOTER_CROSS_SITE_LINK_15} =  xpath=(//a[contains(@class,'tags-link')])[15]
+${FOOTER_CROSS_SITE_LINK_16} =  xpath=(//a[contains(@class,'tags-link')])[16]
+${FOOTER_CROSS_SITE_LINK_17} =  xpath=(//a[contains(@class,'tags-link')])[17]
+${FOOTER_CROSS_SITE_LINK_18} =  xpath=(//a[contains(@class,'tags-link')])[18]
+
+@{FOOTER_CROSS_SITE_LINKS_LIST_1}  ${FOOTER_CROSS_SITE_LINK_1}
+...                                ${FOOTER_CROSS_SITE_LINK_2}
+...                                ${FOOTER_CROSS_SITE_LINK_3}
+...                                ${FOOTER_CROSS_SITE_LINK_4}
+...                                ${FOOTER_CROSS_SITE_LINK_5}
+...                                ${FOOTER_CROSS_SITE_LINK_6}
+...                                ${FOOTER_CROSS_SITE_LINK_7}
+...                                ${FOOTER_CROSS_SITE_LINK_8}
+...                                ${FOOTER_CROSS_SITE_LINK_9}
+...                                ${FOOTER_CROSS_SITE_LINK_10}
+...                                ${FOOTER_CROSS_SITE_LINK_11}
+...                                ${FOOTER_CROSS_SITE_LINK_12}
+
+
+@{FOOTER_CROSS_SITE_LINKS_LIST_2}  ${FOOTER_CROSS_SITE_LINK_13}
+...                                ${FOOTER_CROSS_SITE_LINK_14}
+...                                ${FOOTER_CROSS_SITE_LINK_15}
+...                                ${FOOTER_CROSS_SITE_LINK_16}
+...                                ${FOOTER_CROSS_SITE_LINK_17}
+...                                ${FOOTER_CROSS_SITE_LINK_18}
+
+${FOOTER} =  xpath=//div[@class='app-footer']
+${SHOW_MORE_BUTTON} =  xpath=//button[@class = 'read-more-btn button button_size_medium button_color_green']
+${MASTER_CARD_LOGO} =  xpath=//img[@alt='MasterCard Secure']
 
 # LeftSideBar.robot
 ${PRODUCT_CATEGORY_LINK_1} =  xpath=(//a[contains(@class,'category-link px-3')])[1]

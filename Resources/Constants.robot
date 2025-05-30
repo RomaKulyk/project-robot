@@ -56,6 +56,16 @@ ${FOOTER_CROSS_SITE_LINK_18} =  xpath=(//a[contains(@class,'tags-link')])[18]
 ...                                ${FOOTER_CROSS_SITE_LINK_17}
 ...                                ${FOOTER_CROSS_SITE_LINK_18}
 
+@{FOOTER_HEADERS_LIST}  ${FOOTER_HEADER_1}
+...                     ${FOOTER_HEADER_2}
+...                     ${FOOTER_HEADER_3}
+...                     ${FOOTER_HEADER_4}
+
+${FOOTER_HEADER_1} =  xpath=(//h3[@class = 'footer-links__label'])[1]
+${FOOTER_HEADER_2} =  xpath=(//h3[@class = 'footer-links__label'])[2]
+${FOOTER_HEADER_3} =  xpath=(//h3[@class = 'footer-links__label'])[3]
+${FOOTER_HEADER_4} =  xpath=(//h3[@class = 'footer-links__label'])[4]
+
 ${FOOTER} =  xpath=//div[@class='app-footer']
 ${SHOW_MORE_BUTTON} =  xpath=//button[@class = 'read-more-btn button button_size_medium button_color_green']
 ${MASTER_CARD_LOGO} =  xpath=//img[@alt='MasterCard Secure']

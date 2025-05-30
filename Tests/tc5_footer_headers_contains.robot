@@ -9,12 +9,12 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # use the below line (without the # sign) to run the script
-# robot -d Output .\Tests\tc4_footer_tags_links.robot
+# robot -d Output .\Tests\tc5_footer_headers_contains.robot
 
 *** Test Cases ***
-Footer tags links should contains 18 categories
+Footer headers should contain 4 headers
     [Tags]  Current
     RozetkaApp.Go To Main Page
-    Footer.Click Footer Tags Links
-    Footer.Verify Footer Tags Links Count
-    Footer.Take Footer Screenshot  footer_tags_links.png
+    Footer.Verify Footer Headers
+    Footer.Verify Footer Headers Count
+    Footer.Take Footer Screenshot  footer_headers.png

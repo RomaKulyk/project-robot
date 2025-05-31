@@ -70,7 +70,10 @@ ${FOOTER} =  xpath=//div[@class='app-footer']
 ${SHOW_MORE_BUTTON} =  xpath=//button[@class = 'read-more-btn button button_size_medium button_color_green']
 ${MASTER_CARD_LOGO} =  xpath=//img[@alt='MasterCard Secure']
 
-# LeftSideBar.robot
+# LandingPage.robot
+${LANDING_PAGE_ALERT} =  xpath=//a[contains(@class,'weblayer--box-web-push-subscription vertical-top horizontal-left enter-slide-left')]
+
+# LeftSideBar.robot    
 ${PRODUCT_CATEGORY_LINK_1} =  xpath=(//a[contains(@class,'category-link px-3')])[1]
 ${PRODUCT_CATEGORY_LINK_2} =  xpath=(//a[contains(@class,'category-link px-3')])[2]
 ${PRODUCT_CATEGORY_LINK_3} =  xpath=(//a[contains(@class,'category-link px-3')])[3]
@@ -111,6 +114,7 @@ ${PRODUCT_CATEGORY_LINK_18} =  xpath=(//a[contains(@class,'category-link px-3')]
 
 # Product.robot
 ${PRODUCT_TO_BUY} =   xpath=//rz-product-buy-btn/rz-buy-button/button
+${PRODUCT_1} =  xpath=(//a[@class='tile-image-host d-block w-full'])[1]
 
 # Search.robot
 ${SEARCH_RESULTS_PRODUCT_LINK} =  xpath=//li[7]/rz-catalog-tile/app-goods-tile-default/div/div[2]/div[1]/rz-button-product-page[1]/rz-indexed-link/a

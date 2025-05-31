@@ -32,7 +32,7 @@ Search for Products
     SearchResult.Verify Search Completed
 
 Select Product from Search Results
-    SearchResult.Click Product link
+    SearchResult.Click Product link  ${SEARCH_RESULTS_PRODUCT_LINK}
     Product.Verify Page Loaded
 
 Verify Main Page Contains Categories

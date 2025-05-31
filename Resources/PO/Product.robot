@@ -8,3 +8,14 @@ Verify Page Loaded
 Add to Cart
     Click Button    ${PRODUCT_TO_BUY}
     Sleep  3
+
+
+Verify Page Title Is
+    [Arguments]  ${expected_title}
+    ${actual_title}=  Get Title
+    Should Be Equal As Strings  ${actual_title}  ${expected_title}
+
+
+Take Product Screenshot
+    [Arguments]  ${screenshot_name}
+    Capture Page Screenshot  ${screenshot_name}

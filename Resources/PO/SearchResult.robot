@@ -11,5 +11,10 @@ Verify Product Count
     ${COUNT} =  Get Element Count  ${EXPECTED_PRODUCT_COUNT}  
     Should Be True  ${COUNT} == 60
 
+# Click Product link
+#      Click Link    ${SEARCH_RESULTS_PRODUCT_LINK}
+
 Click Product link
-     Click Link    ${SEARCH_RESULTS_PRODUCT_LINK}
+    [Arguments]  ${variable}
+    Click Link    ${variable}
+    Sleep  3

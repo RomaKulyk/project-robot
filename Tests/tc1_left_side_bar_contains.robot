@@ -14,5 +14,6 @@ Test Teardown  End Web Test
 User should be able to choose any item from 18 products categories in leftside bar
     [Tags]  Current
     RozetkaApp.Go To Main Page
+    LeftSideBar.Verify Category Links Exists
     LeftSideBar.Click Product Category Links
     RozetkaApp.Verify Main Page Contains Categories

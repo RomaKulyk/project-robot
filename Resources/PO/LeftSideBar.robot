@@ -21,7 +21,7 @@ Click Product Category Link
 Verify Categories Count
     [Arguments]  
     ${COUNT} =  Get Length  ${PRODUCT_CATEGORY_LIST}  
-    Should Be True  ${COUNT} == 18
+    Should Be True  ${COUNT} == 17
 
 
 Verify Category Links Exists

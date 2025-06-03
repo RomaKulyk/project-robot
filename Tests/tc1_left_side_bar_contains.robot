@@ -8,10 +8,10 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
 # use the below line (without the # sign) to run the script
-# robot -d results .\Tests\tc1_left_side_bar_contains.robot
+# robot -d Output .\Tests\tc1_left_side_bar_contains.robot
 
 *** Test Cases ***
-User should be able to choose any item from 18 products categories in leftside bar
+User should be able to choose any item from 17 products categories in leftside bar
     [Tags]  Current
     RozetkaApp.Go To Main Page
     LeftSideBar.Verify Category Links Exists

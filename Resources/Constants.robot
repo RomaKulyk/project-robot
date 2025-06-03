@@ -72,6 +72,8 @@ ${MASTER_CARD_LOGO} =  xpath=//img[@alt='MasterCard Secure']
 
 # LandingPage.robot
 ${LANDING_PAGE_ALERT} =  xpath=//a[contains(@class,'weblayer--box-web-push-subscription vertical-top horizontal-left enter-slide-left')]
+${CATALOG_BUTTON} =  xpath=//button[@class='button button--medium button--with-icon fat-menu']
+${CATALOG_DROPDOWN} =  xpath=//div[@class='layout-content d-flex']
 
 # LeftSideBar.robot    
 ${PRODUCT_CATEGORY_LINK_1} =  xpath=(//a[contains(@class,'category-link px-3')])[1]
@@ -91,7 +93,7 @@ ${PRODUCT_CATEGORY_LINK_14} =  xpath=(//a[contains(@class,'category-link px-3')]
 ${PRODUCT_CATEGORY_LINK_15} =  xpath=(//a[contains(@class,'category-link px-3')])[15]
 ${PRODUCT_CATEGORY_LINK_16} =  xpath=(//a[contains(@class,'category-link px-3')])[16]
 ${PRODUCT_CATEGORY_LINK_17} =  xpath=(//a[contains(@class,'category-link px-3')])[17]
-${PRODUCT_CATEGORY_LINK_18} =  xpath=(//a[contains(@class,'category-link px-3')])[18]
+# ${PRODUCT_CATEGORY_LINK_18} =  xpath=(//a[contains(@class,'category-link px-3')])[18]
 
 @{PRODUCT_CATEGORY_LIST}    ${PRODUCT_CATEGORY_LINK_1}
 ...                         ${PRODUCT_CATEGORY_LINK_2} 
@@ -110,7 +112,9 @@ ${PRODUCT_CATEGORY_LINK_18} =  xpath=(//a[contains(@class,'category-link px-3')]
 ...                         ${PRODUCT_CATEGORY_LINK_15} 
 ...                         ${PRODUCT_CATEGORY_LINK_16} 
 ...                         ${PRODUCT_CATEGORY_LINK_17} 
-...                         ${PRODUCT_CATEGORY_LINK_18} 
+# ...                         ${PRODUCT_CATEGORY_LINK_18} 
+
+@{PRODUCT_CATEGORY_LIST_DYN} =  xpath=//ul[@class='sidebar-theme']/child::li
 
 # Product.robot
 ${PRODUCT_TO_BUY} =   xpath=//rz-product-buy-btn/rz-buy-button/button
@@ -126,4 +130,8 @@ ${SIGNIN_MAIN_HEADING} =  xpath=//rz-checkout-orders/rz-checkout-orders-content/
 # TopNav.robot
 ${TOPNAV_SEARCH_BAR} =  xpath=//rz-search-suggest/form/div[1]/div/div/input
 ${TOPNAV_SEARCH_BUTTON} =  xpath=//rz-search-suggest/form/div[1]/button
+
 ${TOPNAV_MAIN_LOGO} =  xpath=//header/div/div/a/picture/img
+
+${CAT_DROP_CAT_LINK} =  xpath=//ul[@class='list']/child::li
+${CAT_DROP_CAT_LINKS_LIST} =  xpath=//ul[@class='list']/child::li
